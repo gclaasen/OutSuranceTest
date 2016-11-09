@@ -30,11 +30,9 @@ namespace OutSuranceTest.Worker
 
         private void CreateFrequencyListOfSurnames()
         {
-            List<string> surname = new List<string>();
-
             var surnameFreq = new List<SurnameFrequency>();
-            var surnameFreqAsc = new List<SurnameFrequency>();
 
+            List<string> surname = new List<string>();
             foreach (var surn in personList)
             {
                 surname.Add(surn.Lastname);
@@ -49,12 +47,24 @@ namespace OutSuranceTest.Worker
                 });
             }
 
+            List<string> addlist, addlistAsc;
+
+            SortingNameSurnameData(surnameFreq, out addlist, out addlistAsc);
+
+            wf.WriteResultToTextFile(addlist, addlistAsc, "CreateFrequencyListOfSurnames");
+        }
+
+        private static void SortingNameSurnameData(List<SurnameFrequency> surnameFreq, out List<string> addlist, out List<string> addlistAsc)
+        {
+
+
+            var surnameFreqAsc = new List<SurnameFrequency>();
+
             surnameFreq = surnameFreq.OrderByDescending(s => s.Surname).ToList();
             surnameFreqAsc = surnameFreq.OrderBy(s => s.Surname).ToList();
 
-            List<string> addlist = new List<string>();
-            List<string> addlistAsc = new List<string>();
-
+            addlist = new List<string>();
+            addlistAsc = new List<string>();
             foreach (var aa in surnameFreq)
             {
                 addlist.Add(aa.Surname + ", " + aa.NoOfTimes);
@@ -64,8 +74,6 @@ namespace OutSuranceTest.Worker
             {
                 addlistAsc.Add(aa.Surname + ", " + aa.NoOfTimes);
             }
-
-            wf.WriteResultToTextFile(addlist, addlistAsc, "CreateFrequencyListOfSurnames");
         }
 
         private void CreateOrderedListOfAddressesAsc()
