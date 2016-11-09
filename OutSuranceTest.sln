@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutSuranceTest", "OutSuranceTest\OutSuranceTest.csproj", "{704DA5E7-AEDC-4F75-9826-9AF9130666BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutSuranceTesting", "OutSuranceTesting\OutSuranceTesting.csproj", "{2299BB0C-D262-41DB-99F9-A9CEDDCCA270}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{704DA5E7-AEDC-4F75-9826-9AF9130666BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{704DA5E7-AEDC-4F75-9826-9AF9130666BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{704DA5E7-AEDC-4F75-9826-9AF9130666BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{704DA5E7-AEDC-4F75-9826-9AF9130666BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2299BB0C-D262-41DB-99F9-A9CEDDCCA270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2299BB0C-D262-41DB-99F9-A9CEDDCCA270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2299BB0C-D262-41DB-99F9-A9CEDDCCA270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2299BB0C-D262-41DB-99F9-A9CEDDCCA270}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
