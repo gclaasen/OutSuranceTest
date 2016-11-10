@@ -21,11 +21,11 @@ namespace OutSuranceTest.Helpers
 
             if (whichFile == "CreateOrderedListOfAddressesAsc")
             {
-                path = @"../../" + whichFile + ".txt";
+                path = @"../../results/" + whichFile + ".txt";
             }
             else
             {
-                path = @"../../" + whichFile + ".txt";
+                path = @"../../results/" + whichFile + ".txt";
             }
 
             using (FileStream fs = File.Create(path))
