@@ -41,13 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Address.cs" />
-    <Compile Include="Helpers\WriteToFiles.cs" />
-    <Compile Include="Models\SurnameFrequency.cs" />
-    <Compile Include="Models\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Worker\CreateSortedDataFilesFromCSV.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -55,7 +50,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="results\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OutSuranceBComp\OutSuranceBComp.csproj">
+      <Project>{db32903a-ce74-435f-87ed-ba2e10a74f4c}</Project>
+      <Name>OutSuranceBComp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

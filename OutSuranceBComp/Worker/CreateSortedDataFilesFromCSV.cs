@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using OutSuranceTest.Models;
-using OutSuranceTest.Helpers;
+using OutSuranceBComp.Models;
+using OutSuranceBComp.Helpers;
+using System.Configuration;
 
 
-namespace OutSuranceTest.Worker
+namespace OutSuranceBComp.Worker
 {
     public class CreateSortedDataFilesFromCSVFile
     {
-        private string _filePath = @"../../data/data.csv";
+        private string _filePath = ConfigurationManager.AppSettings["DataFolder"].ToString();
 
         private WriteToFiles wf = new WriteToFiles();
 
@@ -21,7 +20,7 @@ namespace OutSuranceTest.Worker
 
         public void CreateSortedDataFiles()
         {
-           personList = AssigningValues(_filePath);
+            personList = AssigningValues(_filePath);
 
             CreateOrderedListOfAddressesAsc();
 

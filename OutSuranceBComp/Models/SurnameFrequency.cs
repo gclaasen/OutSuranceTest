@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OutSuranceTest.Models
+namespace OutSuranceBComp.Models
 {
     public class SurnameFrequency
     {
